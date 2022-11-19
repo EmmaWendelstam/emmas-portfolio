@@ -82,6 +82,7 @@ p {
   font-weight: 300;
 }
 
+/* hover nav links */
 a:hover {
   color: rgba(149, 164, 176, 0.854);
 }
@@ -152,8 +153,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
 }
 
 .project-scroll {
@@ -205,14 +204,22 @@ a:hover {
   padding-right: 2rem;
 }
 
+.project-2-container {
+  background-color: #f9f9f9;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
 .project-2 {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
   justify-content: center;
   height: 100vh;
+  width: 68vw;
   padding-top: 10rem;
-  background-color: #f9f9f9;
 }
 
 .project-2 img {
@@ -240,13 +247,21 @@ a:hover {
   padding-top: 8.5rem;
 }
 
+.project-4-container {
+  background-color: #f9f9f9;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
 .project-4 {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
+  width: 68vw;
   height: 100vh;
   padding-top: 10rem;
-  background-color: #f9f9f9;
 }
 
 .project-4 img {
@@ -263,7 +278,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  height: 100vh;
+  height: 75vh;
   padding-top: 10rem;
 }
 
@@ -289,7 +304,7 @@ a:hover {
 
 .center-style-btn:hover {
   cursor: pointer;
-  background-color: rgba(240, 240, 232, 0.869);
+  background-color: rgba(168, 193, 196, 0.869);
 }
 
 .center-btn {
@@ -319,7 +334,58 @@ a:hover {
   height: 20vh;
 }
 
-/* MEDIA QUERYES  */
+/* ANIMATIONS */
+
+/* .fadeInLeft {
+  animation: fadeInLeft 1.5s both;
+} */
+
+/* @keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInRight {
+  animation: fadeInRight 1.5s both;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+.animated-img {
+  opacity: 0;
+  transform: translateX(500px);
+  transition: all 500ms ease-in-out;
+}
+
+.left {
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: all 500ms ease-in-out;
+}
+
+.fade {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+/* MEDIA QUERY */
 
 @media (max-width: 800px) {
   .flexbox {
